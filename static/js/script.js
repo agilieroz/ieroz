@@ -47,7 +47,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
         typeEffect(nameElement, "Agil Sieroz", 100, function () {
             textElement.classList.add("typing");
-            typeEffect(textElement, "Hanya seseorang yang antusias dengan AI, senang belajar hal baru, dan ingin tahu bagaimana teknologi bisa mengubah dunia.", 50);
+            typeEffect(textElement, "Sistem pemerintahan yang kacau. Sudah di demo, di debat, dan di kritik, tapi tidak ada evaluasi dan eksekusinya nol.", 50);
+            typeEffect(textElement, "BANGSA INI PENAKUT UNTUK BERUBAH #INDONESIAGELAP", 50);
         });
     });
 
