@@ -47,8 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         typeEffect(nameElement, "Agil Sieroz", 100, function () {
             textElement.classList.add("typing");
-            typeEffect(textElement, "Sistem pemerintahan yang kacau. Sudah di demo, di debat, dan di kritik, tapi tidak ada evaluasi dan eksekusinya nol.", 50);
-            typeEffect(textElement, "BANGSA INI PENAKUT UNTUK BERUBAH #INDONESIAGELAP", 50);
+            typeEffect(textElement, "Sistem pemerintahan yang kacau. Sudah di demo, di debat, dan di kritik, tapi tidak ada evaluasi dan eksekusinya nol. BANGSA INI PENAKUT UNTUK BERUBAH #INDONESIAGELAP", 50);
         });
     });
 
