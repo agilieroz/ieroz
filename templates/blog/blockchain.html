@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blockchain: Lebih dari Sekadar Cryptocurrency</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body { background-color: black; color: white; transition: opacity 0.5s ease-in-out; }
+        .fade-in { opacity: 0; transition: opacity 1s ease-in-out; }
+        .container { max-width: 800px; margin: auto; padding: 20px; }
+        h2 { border-left: 4px solid cyan; padding-left: 10px; margin-top: 20px; }
+    </style>
+</head>
+<body class="fade-in">
+    <header class="text-center p-6 bg-gray-900">
+        <h1 class="text-3xl font-bold">Blockchain: Lebih dari Sekadar Cryptocurrency</h1>
+        <a href="{{ url_for('blog') }}" class="text-cyan-400">⬅ Kembali ke Blog</a>
+    </header>
+    
+    <main class="container mt-6">
+        <h2 class="text-2xl font-semibold">1. Pendahuluan</h2>
+            <p class="mt-2 text-lg">
+                Blockchain sering dikaitkan dengan cryptocurrency seperti Bitcoin dan Ethereum. Namun, teknologi ini memiliki potensi yang jauh lebih besar daripada sekadar alat untuk transaksi keuangan. 
+                Blockchain adalah sistem pencatatan data yang terdesentralisasi, transparan, dan aman, yang dapat digunakan di berbagai industri. Blog ini akan menjelajahi apa itu blockchain, cara kerjanya, dan aplikasinya di luar dunia cryptocurrency.
+            </p>
+        </section>
+
+        <section class="mb-6">
+            <h2 class="text-2xl font-semibold">2. Apa Itu Blockchain?</h2>
+            <p class="mt-2 text-lg">
+                Blockchain adalah teknologi penyimpanan data yang terdiri dari serangkaian "blok" yang saling terhubung. Setiap blok berisi data transaksi yang diverifikasi oleh jaringan komputer (node) dan tidak dapat diubah setelah dicatat.
+            </p>
+            <ul class="list-disc list-inside mt-3">
+                <li><strong>Desentralisasi:</strong> Tidak ada otoritas pusat yang mengontrol data.</li>
+                <li><strong>Transparansi:</strong> Semua transaksi dapat dilihat oleh semua pihak di jaringan.</li>
+                <li><strong>Keamanan:</strong> Data dienkripsi dan hampir tidak mungkin diretas.</li>
+                <li><strong>Immutability:</strong> Data yang sudah tercatat tidak dapat diubah atau dihapus.</li>
+            </ul>
+        </section>
+
+        <section class="mb-6">
+            <h2 class="text-2xl font-semibold">3. Bagaimana Blockchain Bekerja?</h2>
+            <p class="mt-2 text-lg">Proses kerja blockchain dapat dijelaskan dalam beberapa langkah:</p>
+            <ol class="list-decimal list-inside mt-3">
+                <li><strong>Transaksi Dimulai:</strong> Pengguna mengirimkan transaksi (misalnya, transfer cryptocurrency).</li>
+                <li><strong>Verifikasi oleh Node:</strong> Transaksi diverifikasi oleh jaringan komputer (node) menggunakan algoritma konsensus seperti Proof of Work atau Proof of Stake.</li>
+                <li><strong>Pembentukan Blok:</strong> Transaksi yang diverifikasi dikelompokkan ke dalam blok.</li>
+                <li><strong>Penambahan ke Chain:</strong> Blok baru ditambahkan ke blockchain yang sudah ada, membentuk rantai blok yang terus bertambah.</li>
+                <li><strong>Penyebaran ke Jaringan:</strong> Blockchain yang diperbarui disebarkan ke semua node di jaringan.</li>
+            </ol>
+        </section>
+
+        <section class="mb-6">
+            <h2 class="text-2xl font-semibold">4. Aplikasi Blockchain di Berbagai Bidang</h2>
+            <p class="mt-2 text-lg">Blockchain memiliki potensi untuk mengubah berbagai industri, termasuk:</p>
+
+            <h3 class="text-xl font-semibold mt-4">a. Supply Chain dan Logistik</h3>
+            <p>Blockchain dapat digunakan untuk melacak pergerakan barang dari produsen ke konsumen.</p>
+            <p class="italic">Contoh: Walmart menggunakan blockchain untuk melacak asal-usul produk makanan.</p>
+
+            <h3 class="text-xl font-semibold mt-4">b. Kesehatan</h3>
+            <p>Blockchain memungkinkan penyimpanan dan pembagian data pasien secara aman.</p>
+            <p class="italic">Contoh: Medicalchain menggunakan blockchain untuk rekam medis digital.</p>
+
+            <h3 class="text-xl font-semibold mt-4">c. Keuangan dan Perbankan</h3>
+            <p>Blockchain digunakan dalam pembayaran lintas batas dan smart contracts.</p>
+            <p class="italic">Contoh: Ripple menggunakan blockchain untuk transfer uang global.</p>
+
+            <h3 class="text-xl font-semibold mt-4">d. Voting dan Pemerintahan</h3>
+            <p>Blockchain dapat digunakan untuk sistem voting yang transparan dan bebas kecurangan.</p>
+            <p class="italic">Contoh: Estonia menggunakan blockchain untuk e-governance.</p>
+
+            <h3 class="text-xl font-semibold mt-4">e. Seni dan Hiburan</h3>
+            <p>Teknologi NFT memungkinkan kepemilikan aset digital seperti seni, musik, dan video.</p>
+            <p class="italic">Contoh: Seniman Beeple menjual karyanya sebagai NFT seharga $69 juta.</p>
+        </section>
+
+        <section class="mb-6">
+            <h2 class="text-2xl font-semibold">5. Keunggulan Blockchain</h2>
+            <ul class="list-disc list-inside mt-3">
+                <li><strong>Keamanan Tinggi:</strong> Data dienkripsi dan didistribusikan ke banyak node.</li>
+                <li><strong>Transparansi:</strong> Semua transaksi dapat dilihat oleh semua pihak.</li>
+                <li><strong>Efisiensi:</strong> Menghilangkan perantara dan mempercepat transaksi.</li>
+                <li><strong>Desentralisasi:</strong> Tidak ada otoritas pusat yang bisa dimanipulasi.</li>
+            </ul>
+        </section>
+
+        <section class="mb-6">
+            <h2 class="text-2xl font-semibold">6. Tantangan dalam Pengembangan Blockchain</h2>
+            <ul class="list-disc list-inside mt-3">
+                <li><strong>Skalabilitas:</strong> Jaringan blockchain memiliki keterbatasan dalam jumlah transaksi per detik.</li>
+                <li><strong>Konsumsi Energi:</strong> Proses mining membutuhkan energi yang besar.</li>
+                <li><strong>Regulasi:</strong> Kurangnya regulasi yang jelas dapat menghambat adopsi blockchain.</li>
+                <li><strong>Kurangnya Pemahaman:</strong> Banyak orang masih belum memahami cara kerja blockchain.</li>
+            </ul>
+        </section>
+
+        <section class="mb-6">
+            <h2 class="text-2xl font-semibold">7. Kesimpulan</h2>
+            <p class="mt-2 text-lg">
+                Blockchain adalah teknologi revolusioner yang memiliki potensi besar di berbagai industri. Dengan keunggulan seperti keamanan, transparansi, dan desentralisasi, blockchain dapat meningkatkan efisiensi dan kepercayaan dalam banyak bidang. 
+                Namun, tantangan seperti skalabilitas, konsumsi energi, dan regulasi perlu diatasi agar blockchain dapat diadopsi secara luas dan memberikan manfaat maksimal.
+            </p>
+    </main>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            document.body.style.opacity = 1;
+        });
+    </script>
+</body>
+</html>

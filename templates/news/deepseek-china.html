@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DeepSeek China vs OpenAI & Google</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body { background-color: black; color: white; transition: opacity 0.5s ease-in-out; }
+        .fade-in { opacity: 0; transition: opacity 1s ease-in-out; }
+        .container { max-width: 800px; margin: auto; padding: 20px; }
+        h2 { border-left: 4px solid cyan; padding-left: 10px; margin-top: 20px; }
+    </style>
+</head>
+<body class="fade-in p-6">
+    <header class="p-4 bg-gray-900 text-center rounded-lg shadow-lg">
+        <h1 class="text-3xl font-bold">DeepSeek China vs OpenAI & Google</h1>
+        <a href="{{ url_for('news') }}" class="text-cyan-400 hover:text-cyan-300 transition">⬅ Kembali ke IZ News</a>
+    </header>
+    
+    <main class="mt-6 max-w-3xl mx-auto">
+        <img src="/static/img/iznews1.jpg" alt="deepSeek-china">
+        
+        <article class="space-y-6">
+            <h2>Pendahuluan</h2>
+        <p>Artikel dari <em>The Economic Times</em> membahas bagaimana DeepSeek, sebuah perusahaan kecerdasan buatan (AI) asal China, muncul sebagai pesaing signifikan bagi raksasa teknologi global seperti OpenAI dan Google. Kemajuan DeepSeek dalam teknologi AI dianggap sebagai ancaman potensial terhadap dominasi para pemain mapan di industri AI.</p>
+        
+        <h2>Kemajuan DeepSeek dalam AI</h2>
+        <p>DeepSeek telah membuat kemajuan pesat dalam mengembangkan solusi AI mutakhir, terutama di bidang pemrosesan bahasa alami, pembelajaran mesin, dan sistem otonom. Inovasi perusahaan ini tidak hanya meningkatkan daya saingnya tetapi juga menantang lanskap AI global, yang selama ini didominasi oleh perusahaan-perusahaan berbasis AS seperti OpenAI (pencipta ChatGPT) dan Google (dengan proyek DeepMind dan Bard-nya).</p>
+        
+        <h2>Dorongan Strategis China dalam AI</h2>
+        <p>Artikel ini menyoroti bahwa kebangkitan DeepSeek didorong oleh fokus kuat China untuk menjadi pemimpin global dalam teknologi AI. Pemerintah China telah berinvestasi besar-besaran dalam penelitian dan pengembangan AI, menciptakan lingkungan yang mendukung bagi perusahaan seperti DeepSeek untuk berkembang. Dorongan strategis ini merupakan bagian dari tujuan China yang lebih luas untuk mencapai kemandirian teknologi dan mengurangi ketergantungan pada teknologi asing.</p>
+        
+        <h2>Keunggulan Kompetitif DeepSeek</h2>
+        <p>Selain itu, kemampuan DeepSeek dalam memanfaatkan sumber daya data yang besar di China dan keahliannya dalam algoritma AI memberikan keunggulan tersendiri. Perusahaan ini tidak hanya bersaing di pasar domestik tetapi juga memperluas pengaruhnya secara global, menantang langsung OpenAI dan Google.</p>
+        
+        <h2>Kesimpulan</h2>
+        <p>Artikel ini menyimpulkan bahwa kemunculan DeepSeek menandakan pergeseran dalam dinamika kekuatan AI global. Seiring dengan terus berkembangnya inovasi dan skala perusahaan-perusahaan AI China, mereka berpotensi mengganggu hierarki saat ini di industri teknologi, membuat persaingan semakin intens dan membentuk kembali masa depan pengembangan AI.</p>
+        
+        <h2>Sumber</h2>
+        <p>
+            <em>The Economic Times</em>. "Chinese DeepSeek is an existential threat to OpenAI and Google."<br>
+            Tersedia di: 
+            <a href="https://m.economictimes.com/prime/technology-and-startups/chinese-deepseek-is-an-existential-threat-to-openai-and-google/primearticleshow/117594895.cms" target="_blank">
+                https://m.economictimes.com/prime/technology-and-startups/chinese-deepseek-is-an-existential-threat-to-openai-and-google/primearticleshow/117594895.cms
+            </a>
+        </p>
+        </article>
+    </main>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            document.body.style.opacity = 1;
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Ieroz</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body { 
+            background-color: black; 
+            color: white; 
+            transition: opacity 0.5s ease-in-out;
+        }
+        .fade-in { 
+            opacity: 0; 
+            transition: opacity 1s ease-in-out; 
+        }
+    </style>
+</head>
+<body class="fade-in">
+    <header class="p-6 bg-gray-900 text-center shadow-lg">
+        <h1 class="text-4xl font-bold text-cyan-400">Blog Ieroz</h1>
+        <a href="{{ url_for('home') }}" class="text-cyan-400 hover:underline">⬅ Kembali ke Home</a>
+    </header>
+    
+    <main class="p-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <article class="bg-gray-800 p-6 rounded-lg shadow-lg transform hover:scale-105 transition">
+            <h2 class="text-2xl font-bold text-cyan-400">Kecerdasan Buatan dalam Seni dan Kreativitas: Ancaman atau Peluang?</h2>
+            <p class="text-gray-400 text-sm">Diposting pada 20 Februari 2025</p>
+            <p class="mt-2">Bagaimana AI digunakan dalam seni dan kreativitas?</p>
+            <a href="/blog/kecerdasan-buatan.html" class="text-blue-400 hover:underline">Baca selengkapnya...</a>
+        </article>
+
+        <article class="bg-gray-800 p-6 rounded-lg shadow-lg transform hover:scale-105 transition">
+            <h2 class="text-2xl font-bold text-cyan-400">Biotechnology: Masa Depan Kesehatan dan Pertanian</h2>
+            <p class="text-gray-400 text-sm">Diposting pada 20 Februari 2025</p>
+            <p class="mt-2">Apa itu bioteknologi dan mengapa penting?</p>
+            <a href="/blog/bioteknologi.html" class="text-blue-400 hover:underline">Baca selengkapnya...</a>
+        </article>
+
+        <article class="bg-gray-800 p-6 rounded-lg shadow-lg transform hover:scale-105 transition">
+            <h2 class="text-2xl font-bold text-cyan-400">Mobil Otonom: Transportasi Masa Depan yang Aman dan Efisien</h2>
+            <p class="text-gray-400 text-sm">Diposting pada 20 Februari 2025</p>
+            <p class="mt-2">Apa itu mobil otonom dan bagaimana cara kerjanya?</p>
+            <a href="/blog/mobil-otonom.html" class="text-blue-400 hover:underline">Baca selengkapnya...</a>
+        </article>
+
+        <article class="bg-gray-800 p-6 rounded-lg shadow-lg transform hover:scale-105 transition">
+            <h2 class="text-2xl font-bold text-cyan-400">Cybersecurity: Perlindungan di Era Digital yang Semakin Rentan</h2>
+            <p class="text-gray-400 text-sm">Diposting pada 20 Februari 2025</p>
+            <p class="mt-2">Mengapa keamanan siber semakin penting?</p>
+            <a href="/blog/cybersecurity.html" class="text-blue-400 hover:underline">Baca selengkapnya...</a>
+        </article>
+
+        <article class="bg-gray-800 p-6 rounded-lg shadow-lg transform hover:scale-105 transition">
+            <h2 class="text-2xl font-bold text-cyan-400">Space Exploration: Misi Menjelajahi Luar Angkasa di Abad 21</h2>
+            <p class="text-gray-400 text-sm">Diposting pada 20 Februari 2025</p>
+            <p class="mt-2">Mengapa eksplorasi luar angkasa penting?</p>
+            <a href="/blog/Space-exploration.html" class="text-blue-400 hover:underline">Baca selengkapnya...</a>
+        </article>
+
+        <article class="bg-gray-800 p-6 rounded-lg shadow-lg transform hover:scale-105 transition">
+            <h2 class="text-2xl font-bold text-cyan-400">Augmented Reality (AR): Mengaburkan Batas Antara Dunia Nyata dan Virtual</h2>
+            <p class="text-gray-400 text-sm">Diposting pada 20 Februari 2025</p>
+            <p class="mt-2">Apa itu AR dan bagaimana berbeda dengan VR?</p>
+            <a href="/blog/augmented-reality.html" class="text-blue-400 hover:underline">Baca selengkapnya...</a>
+        </article>
+
+        <article class="bg-gray-800 p-6 rounded-lg shadow-lg transform hover:scale-105 transition">
+            <h2 class="text-2xl font-bold text-cyan-400">Internet of Things (IoT): Menghubungkan Dunia di Ujung Jari Anda</h2>
+            <p class="text-gray-400 text-sm">Diposting pada 20 Februari 2025</p>
+            <p class="mt-2">Apa itu IoT dan bagaimana mengubah kehidupan sehari-hari?</p>
+            <a href="/blog/internet.html" class="text-blue-400 hover:underline">Baca selengkapnya...</a>
+        </article>
+
+        <article class="bg-gray-800 p-6 rounded-lg shadow-lg transform hover:scale-105 transition">
+            <h2 class="text-2xl font-bold text-cyan-400">Blockchain: Lebih dari Sekadar Cryptocurrency</h2>
+            <p class="text-gray-400 text-sm">Diposting pada 20 Februari 2025</p>
+            <p class="mt-2">Apa itu blockchain dan bagaimana cara kerjanya?</p>
+            <a href="/blog/blockchain.html" class="text-blue-400 hover:underline">Baca selengkapnya...</a>
+        </article>
+
+        <article class="bg-gray-800 p-6 rounded-lg shadow-lg transform hover:scale-105 transition">
+            <h2 class="text-2xl font-bold text-cyan-400">Metaverse: Dunia Virtual yang Akan Mengubah Realitas Kita</h2>
+            <p class="text-gray-400 text-sm">Diposting pada 20 Februari 2025</p>
+            <p class="mt-2">Apa itu Metaverse dan mengapa menjadi tren?</p>
+            <a href="/blog/metaverse.html" class="text-blue-400 hover:underline">Baca selengkapnya...</a>
+        </article>
+
+        <article class="bg-gray-800 p-6 rounded-lg shadow-lg transform hover:scale-105 transition">
+            <h2 class="text-2xl font-bold text-cyan-400">Masa Depan Energi Terbarukan: Solusi untuk Krisis Iklim</h2>
+            <p class="text-gray-400 text-sm">Diposting pada 20 Februari 2025</p>
+            <p class="mt-2">Mengapa energi terbarukan penting untuk masa depan?</p>
+            <a href="/blog/energi-terbarukan.html" class="text-blue-400 hover:underline">Baca selengkapnya...</a>
+        </article>
+        
+        <article class="bg-gray-800 p-6 rounded-lg shadow-lg transform hover:scale-105 transition">
+            <h2 class="text-2xl font-bold text-cyan-400">AI dan Masa Depan</h2>
+            <p class="text-gray-400 text-sm">Diposting pada 20 Februari 2025</p>
+            <p class="mt-2">AI berkembang pesat dan mempengaruhi banyak sektor industri</p>
+            <a href="/blog/ai-dan-masa-depan.html" class="text-blue-400 hover:underline">Baca selengkapnya...</a>
+        </article>
+        
+        <article class="bg-gray-800 p-6 rounded-lg shadow-lg transform hover:scale-105 transition">
+            <h2 class="text-2xl font-bold text-cyan-400">Teknologi Quantum</h2>
+            <p class="text-gray-400 text-sm">Diposting pada 19 Februari 2025</p>
+            <p class="mt-2">Komputasi kuantum menawarkan pemecahan masalah kompleks</p>
+            <a href="/blog/teknologi-quantum.html" class="text-blue-400 hover:underline">Baca selengkapnya...</a>
+        </article>
+    </main>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            document.body.style.opacity = 1;
+        });
+    </script>
+</body>
+</html>

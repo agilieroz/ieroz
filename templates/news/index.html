@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IZ News</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body { background-color: black; color: white; transition: opacity 0.5s ease-in-out; }
+    </style>
+</head>
+<body>
+    <header class="p-4 bg-gray-900 text-center">
+        <h1 class="text-3xl font-bold">IZ News</h1>
+        <a href="{{ url_for('home') }}" class="text-cyan-400">⬅ Kembali ke Home</a>
+    </header>
+
+    <main class="p-6">
+        <article class="mb-6">
+            <h2 class="text-2xl font-bold">DeepSeek China vs OpenAI</h2>
+            <p class="text-gray-400">Diposting pada 20 Februari 2025</p>
+            <a href="{{ url_for('news_page', news_filename='deepseek-china.html') }}" class="text-blue-400">Baca selengkapnya...</a>
+        </article>
+
+        <article class="mb-6">
+            <h2 class="text-2xl font-bold">Otoritas Korea Blokir DeepSeek</h2>
+            <p class="text-gray-400">Diposting pada 19 Februari 2025</p>
+            <a href="{{ url_for('news_page', news_filename='korea-deepseek.html') }}" class="text-blue-400">Baca selengkapnya...</a>
+        </article>
+    </main>
+</body>
+</html>

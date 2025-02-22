@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teknologi Quantum</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body { background-color: black; color: white; transition: opacity 0.5s ease-in-out; }
+        .fade-in { opacity: 0; transition: opacity 1s ease-in-out; }
+        .container { max-width: 800px; margin: auto; padding: 20px; }
+        h2 { border-left: 4px solid cyan; padding-left: 10px; margin-top: 20px; }
+    </style>
+</head>
+<body class="fade-in">
+    <header class="text-center p-6 bg-gray-900">
+        <h1 class="text-3xl font-bold">Teknologi Quantum</h1>
+        <a href="{{ url_for('blog') }}" class="text-cyan-400">⬅ Kembali ke Blog</a>
+    </header>
+    
+    <main class="container mt-6">
+        <h2>Pendahuluan</h2>
+        <p>Teknologi quantum adalah salah satu terobosan paling revolusioner dalam dunia sains dan teknologi. Berbeda dengan komputasi klasik yang kita gunakan sehari-hari, komputasi quantum memanfaatkan prinsip-prinsip mekanika quantum untuk memproses informasi dengan cara yang sama sekali baru. Teknologi ini menjanjikan kecepatan dan efisiensi yang jauh melampaui batas kemampuan komputer tradisional.</p>
+        
+        <h2>1. Apa Itu Teknologi Quantum?</h2>
+        <p>Teknologi quantum adalah bidang ilmu yang memanfaatkan prinsip-prinsip mekanika quantum, seperti superposisi, entanglement, dan interferensi quantum, untuk menciptakan sistem komputasi dan komunikasi yang lebih canggih.</p>
+        
+        <h2>2. Bagaimana Komputasi Quantum Bekerja?</h2>
+        <ul>
+            <li><strong>Qubit:</strong> Unit dasar informasi dalam komputasi quantum.</li>
+            <li><strong>Superposisi:</strong> Qubit dapat berada dalam beberapa keadaan sekaligus.</li>
+            <li><strong>Entanglement:</strong> Qubit dapat terhubung satu sama lain.</li>
+            <li><strong>Interferensi Quantum:</strong> Digunakan untuk memperkuat hasil yang diinginkan.</li>
+        </ul>
+        
+        <h2>3. Potensi Aplikasi Teknologi Quantum</h2>
+        <ul>
+            <li><strong>Komputasi dan Pemrosesan Data:</strong> Pemecahan masalah kompleks dan optimisasi.</li>
+            <li><strong>Kriptografi dan Keamanan:</strong> Quantum cryptography untuk enkripsi yang lebih aman.</li>
+            <li><strong>Kimia dan Material Science:</strong> Simulasi molekul untuk penemuan obat.</li>
+            <li><strong>Kecerdasan Buatan (AI):</strong> Machine learning quantum untuk analisis data lebih cepat.</li>
+            <li><strong>Energi dan Lingkungan:</strong> Optimisasi jaringan listrik dan material energi terbarukan.</li>
+        </ul>
+        
+        <h2>4. Tantangan dalam Pengembangan Teknologi Quantum</h2>
+        <ul>
+            <li><strong>Dekohorensi:</strong> Qubit rentan terhadap gangguan lingkungan.</li>
+            <li><strong>Kesulitan Teknis:</strong> Membutuhkan kondisi khusus untuk beroperasi.</li>
+            <li><strong>Biaya Tinggi:</strong> Pengembangan masih sangat mahal.</li>
+            <li><strong>Kurangnya Tenaga Ahli:</strong> Dibutuhkan lebih banyak ilmuwan di bidang ini.</li>
+        </ul>
+        
+        <h2>5. Dampak Teknologi Quantum pada Masa Depan</h2>
+        <p>Teknologi quantum dapat membawa perubahan besar dalam industri, keamanan, ilmu pengetahuan, dan ekonomi global.</p>
+        
+        <h2>6. Kesimpulan</h2>
+        <p>Teknologi quantum adalah salah satu inovasi paling menjanjikan di abad ini. Meskipun masih dalam tahap awal, potensinya untuk mengubah dunia sangat besar.</p>
+        
+        <h2>Ada dua pertanyaan untuk anda pelajari:</h2>
+        <ul>
+            <li>Bagaimana menurut Anda teknologi quantum akan memengaruhi kehidupan sehari-hari kita dalam 10 tahun ke depan?</li>
+            <li>Apa tantangan terbesar yang harus diatasi untuk mewujudkan potensi penuh teknologi quantum?</li>
+        </ul>
+    </main>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            document.body.style.opacity = 1;
+        });
+    </script>
+</body>
+</html>

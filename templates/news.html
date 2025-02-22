@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IZ News - Ieroz</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+         body { 
+            background-color: black; 
+            color: white; 
+            transition: opacity 0.5s ease-in-out;
+        }
+        .fade-in { 
+            opacity: 0; 
+            transition: opacity 1s ease-in-out; 
+        }
+    </style>
+</head>
+<body class="fade-in">
+    <header class="p-6 bg-gray-900 text-center shadow-lg">
+        <h1 class="text-4xl font-bold text-cyan-400">IZ News</h1>
+        <a href="{{ url_for('home') }}" class="text-cyan-400 hover:underline">⬅ Kembali ke Home</a>
+    </header>
+    
+    <main class="p-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <article class="bg-gray-800 p-4 rounded-lg shadow-lg hover:shadow-xl transition">
+            <h2 class="text-2xl font-bold">DeepSeek China Menjadi Ancaman Eksistensial bagi OpenAI dan Google</h2>
+            <p class="text-gray-400">Diposting pada 20 Februari 2025</p>
+            <a href="{{ url_for('news_page', news_filename='deepseek-china.html') }}" class="text-blue-400 hover:underline">Baca selengkapnya...</a>
+        </article>
+        
+        <article class="bg-gray-800 p-4 rounded-lg shadow-lg hover:shadow-xl transition">
+            <h2 class="text-2xl font-bold">Otoritas Perlindungan Data Korea Selatan Menangguhkan Layanan Lokal DeepSeek</h2>
+            <p class="text-gray-400">Diposting pada 19 Februari 2025</p>
+            <a href="{{ url_for('news_page', news_filename='korea-deepseek.html') }}" class="text-blue-400 hover:underline">Baca selengkapnya...</a>
+        </article>
+    </main>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            document.body.style.opacity = 1;
+        });
+    </script>
+</body>
+</html>

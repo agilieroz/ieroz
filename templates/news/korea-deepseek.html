@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DeepSeek vs Korea Selatan</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body { background-color: black; color: white; transition: opacity 0.5s ease-in-out; }
+        .fade-in { opacity: 0; transition: opacity 1s ease-in-out; }
+        .container { max-width: 800px; margin: auto; padding: 20px; }
+        h2 { border-left: 4px solid cyan; padding-left: 10px; margin-top: 20px; }
+    </style>
+</head>
+<body class="fade-in p-6">
+    <header class="p-4 bg-gray-900 text-center rounded-lg shadow-lg">
+        <h1 class="text-3xl font-bold">DeepSeek vs Korea Selatan</h1>
+        <a href="{{ url_for('news') }}" class="text-cyan-400 hover:text-cyan-300 transition">⬅ Kembali ke IZ News</a>
+    </header>
+    
+    <main class="mt-6 max-w-3xl mx-auto">
+        <img src="/static/img/iznews2.jpg" alt="korea-deepseek">
+        
+        <article class="space-y-6">
+        <h2>Pendahuluan</h2>
+        <p>Artikel dari <em>The Economic Times</em> melaporkan bahwa otoritas perlindungan data Korea Selatan telah mengambil tindakan terhadap DeepSeek, sebuah perusahaan kecerdasan buatan (AI) asal China, dengan menangguhkan layanan lokalnya di negara tersebut. Keputusan ini muncul karena kekhawatiran atas privasi data dan kepatuhan terhadap undang-undang perlindungan data ketat di Korea Selatan.</p>
+        
+        <h2>Latar Belakang Keputusan</h2>
+        <p>DeepSeek, yang dikenal dengan teknologi AI mutakhirnya, telah beroperasi di Korea Selatan dengan menawarkan layanan yang sangat bergantung pada pengumpulan dan pemrosesan data. Namun, Komisi Perlindungan Informasi Pribadi Korea Selatan (PIPC) menemukan bahwa praktik DeepSeek tidak sepenuhnya mematuhi peraturan negara tersebut terkait penanganan data pribadi. Secara khusus, PIPC mengangkat masalah tentang bagaimana data pengguna dikumpulkan, disimpan, dan digunakan, terutama terkait persetujuan dan transparansi.</p>
+        
+        <h2>Dampak dan Implikasi</h2>
+        <p>Akibatnya, PIPC memerintahkan DeepSeek untuk menangguhkan operasinya di Korea Selatan hingga perusahaan tersebut dapat menunjukkan kepatuhan terhadap undang-undang perlindungan data setempat. Penangguhan ini merupakan kemunduran besar bagi DeepSeek, mengingat Korea Selatan adalah pasar penting untuk teknologi AI, mengingat infrastruktur teknologinya yang maju dan tingkat adopsi layanan digital yang tinggi.</p>
+        
+        <h2>Privasi dan Regulasi AI</h2>
+        <p>Artikel ini menyoroti bahwa insiden ini menegaskan betapa pentingnya privasi dan keamanan data dalam industri AI. Seiring dengan semakin bergantungnya perusahaan AI pada data dalam jumlah besar untuk melatih model dan meningkatkan layanan mereka, mereka harus menavigasi lanskap regulasi yang kompleks di berbagai negara. Kegagalan mematuhi hukum setempat dapat mengakibatkan konsekuensi serius, termasuk penangguhan layanan, denda, dan kerusakan reputasi.</p>
+        
+        <h2>Masa Depan DeepSeek</h2>
+        <p>Bagi DeepSeek, penangguhan ini tidak hanya memengaruhi operasinya di Korea Selatan tetapi juga memunculkan pertanyaan tentang kemampuannya untuk berekspansi secara global. Seiring dengan semakin ketatnya regulasi perlindungan data di seluruh dunia, perusahaan AI harus memprioritaskan kepatuhan untuk menghindari masalah serupa di pasar lain.</p>
+        
+        <h2>Kesimpulan</h2>
+        <p>Artikel ini menyimpulkan bahwa perkembangan ini mencerminkan ketegangan yang lebih luas di industri teknologi global, terutama antara perusahaan China dan regulator internasional. Saat perusahaan teknologi China seperti DeepSeek berekspansi ke luar negeri, mereka harus menyeimbangkan inovasi dengan kepatuhan terhadap hukum dan peraturan setempat, yang dapat sangat bervariasi dari satu negara ke negara lain.</p>
+        
+        <p><strong>Sumber:</strong></p>
+        <p><em>The Economic Times</em>. "South Korea's Data Protection Authority Suspends Local Service of DeepSeek." <br>
+        Tersedia di: <a href="https://m.economictimes.com/tech/artificial-intelligence/south-koreas-data-protection-authority-suspends-local-service-of-deepseek/articleshow/118315883.cms" target="_blank">Baca Selengkapnya</a></p>
+        </article>
+    </main>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            document.body.style.opacity = 1;
+        });
+    </script>
+</body>
+</html>

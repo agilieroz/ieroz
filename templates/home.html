@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ieroz - Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <style>
+        body { background-color: black; color: white; transition: background-color 0.3s, color 0.3s; }
+        canvas { position: fixed; top: 0; left: 0; z-index: -1; }
+        .content-container { margin-top: 100px; text-align: center; }
+        #sidebar { transition: transform 0.3s ease-in-out; }
+        ul li a { transition: color 0.3s ease-in-out; }
+        ul li a:hover { color: rgb(0, 255, 170); transform: scale(1.05); }
+        #overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5); display: none; }
+        .fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.8s ease-out, transform 0.8s ease-out; }
+    </style>
+</head>
+<body>
+    <canvas id="particleCanvas"></canvas>
+    
+    <div id="overlay"></div>
+    
+    <header class="flex justify-between items-center p-4 bg-gray-900">
+        <h1 class="text-2xl font-bold">Ieroz</h1>
+        <div>
+            <button id="toggleSidebar" class="p-2 bg-gray-700 rounded">☰</button>
+        </div>
+    </header>
+    
+    <div id="sidebar" class="fixed left-0 top-0 w-64 h-full bg-gray-800 p-4 transform -translate-x-full">
+        <ul>
+            <li><a href="/" class="block py-2">Home</a></li>
+            <li><a href="/blog" class="block py-2">Blog</a></li>
+            <li><a href="/news" class="block py-2">IZ News</a></li>
+            <li><a href="/about" class="block py-2">Tentang Saya</a></li>
+            <li><a href="/contact" class="block py-2">Kontak</a></li>
+            <li><a href="/social" class="block py-2">Sosial Media</a></li>
+        </ul>
+    </div>
+    
+    <main class="p-6 fade-in content-container">
+        <div class="marquee-container">
+            <div class="marquee-content">
+                <a href="/blog">Blog</a>
+                <a href="/news">IZ News</a>
+                <a href="/about">Tentang Saya</a>
+                <a href="/contact">Kontak</a>
+                <a href="/social">Sosial Media</a>
+            </div>
+        </div>
+        
+        <img src="/static/img/profile.jpg" alt="Foto Profil" class="rounded-full w-32 h-auto mx-auto">
+        <h2 class="text-xl mt-4" id="typing-name"></h2>
+        <p class="mt-2" id="typing-text"></p>
+
+        
+        <div class="mt-24 mx-auto max-w-4xl p-6 bg-gray-900 rounded-lg shadow-lg border border-green-400">
+            <h3 class="text-lg font-bold text-green-400" id="articleTitle"></h3>
+            <p class="mt-2 text-gray-300" id="articleContent"></p>
+        </div>
+    </main>
+
+    <script>
+        const articles = [
+            { title: "DeepSeek China vs OpenAI & Google", content: "Kemunculan DeepSeek menandakan pergeseran dalam dinamika kekuatan AI global" },
+            { title: "DeepSeek vs Korea Selatan", content: "Otoritas perlindungan data Korea Selatan telah mengambil tindakan terhadap DeepSeek" },
+            { title: "Masa Depan Energi Terbarukan", content: "Energi terbarukan sebagai kunci menuju masa depan berkelanjutan" },
+            { title: "Metaverse: Dunia Virtual yang Akan Mengubah Realitas Kita", content: "Apakah Metaverse adalah masa depan atau sekadar hype?" },
+            { title: "Blockchain: Lebih dari Sekadar Cryptocurrency", content: "Blockchain sebagai teknologi revolusioner" },
+            { title: "Kecerdasan Buatan dalam Seni dan Kreativitas: Ancaman atau Peluang?", content: "AI sebagai alat, bukan pengganti kreativitas manusia" },
+            { title: "Internet of Things (IoT): Menghubungkan Dunia di Ujung Jari Anda", content: "IoT sebagai tulang punggung masa depan digital" },
+            { title: "Biotechnology: Masa Depan Kesehatan dan Pertanian", content: "Bioteknologi sebagai solusi untuk tantangan global" },
+            { title: "Mobil Otonom: Transportasi Masa Depan yang Aman dan Efisien", content: "Mobil otonom sebagai revolusi transportasi" },
+            { title: "Augmented Reality (AR): Mengaburkan Batas Antara Dunia Nyata dan Virtual", content: "AR sebagai alat transformatif di berbagai bidang" },
+            { title: "Space Exploration: Misi Menjelajahi Luar Angkasa di Abad 21", content: "Eksplorasi luar angkasa sebagai langkah besar umat manusia" },
+            { title: "Cybersecurity: Perlindungan di Era Digital yang Semakin Rentan", content: "Keamanan siber sebagai investasi penting untuk masa depan" },
+            { title: "AI dan Masa Depan", content: "AI berkembang pesat dan mempengaruhi banyak sektor industri" },
+            { title: "Teknologi Quantum Computing", content: "Komputasi kuantum menawarkan pemecahan masalah kompleks" },
+            { title: "Blockchain dan Keamanan", content: "Blockchain bukan hanya tentang mata uang kripto, tetapi juga keamanan data" }
+        ];
+
+        let articleIndex = 0;
+
+        function showArticle() {
+            const articleTitle = document.getElementById("articleTitle");
+            const articleContent = document.getElementById("articleContent");
+            
+            articleTitle.innerText = articles[articleIndex].title;
+            articleContent.innerText = articles[articleIndex].content;
+            articleIndex = (articleIndex + 1) % articles.length;
+        }
+
+        setInterval(showArticle, 5000);
+        window.onload = showArticle;
+    </script>
+    
+    <script>
+        const toggleSidebar = document.getElementById('toggleSidebar');
+        const sidebar = document.getElementById('sidebar');
+        const overlay = document.getElementById('overlay');
+        const mainContent = document.querySelector('.fade-in');
+
+        toggleSidebar.addEventListener('click', () => {
+            sidebar.classList.toggle('-translate-x-full');
+            overlay.style.display = sidebar.classList.contains('-translate-x-full') ? 'none' : 'block';
+        });
+
+        overlay.addEventListener('click', () => {
+            sidebar.classList.add('-translate-x-full');
+            overlay.style.display = 'none';
+        });
+
+        // Animasi Fade-in saat halaman dimuat
+        window.addEventListener('load', () => {
+            mainContent.style.opacity = '1';
+            mainContent.style.transform = 'translateY(0)';
+        });
+    </script>
+</body>
+</html>

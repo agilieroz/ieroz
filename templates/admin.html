@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - Ieroz</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-black text-white p-6">
+    <header class="text-center mb-6">
+        <h1 class="text-3xl font-bold">Admin Panel</h1>
+        <a href="{{ url_for('home') }}" class="text-cyan-400">⬅ Kembali ke Home</a>
+    </header>
+    
+    <main class="max-w-3xl mx-auto bg-gray-900 p-6 rounded-lg">
+        <h2 class="text-2xl font-bold mb-4">Tambah Postingan</h2>
+        <form action="{{ url_for('add_post') }}" method="POST">
+            <label for="category">Kategori:</label>
+            <select name="category" id="category">
+                <option value="blog">Blog</option>
+                <option value="news">News</option>
+            </select>
+        
+            <label for="title">Judul:</label>
+            <input type="text" name="title" required>
+        
+            <label for="content">Konten:</label>
+            <textarea name="content" required></textarea>
+        
+            <label for="image">Gambar (hanya untuk News):</label>
+            <input type="text" name="image">
+        
+            <button type="submit">Tambah Post</button>
+        </form>
+        
+    </main>
+</body>
+</html>

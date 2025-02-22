@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sosial Media</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/25cbf6b142.js" crossorigin="anonymous"></script>
+</head>
+<body class="p-6 bg-black text-white flex flex-col items-center">
+    <header class="text-center mb-6">
+        <h1 class="text-3xl font-bold">Sosial Media</h1>
+        <a href="{{ url_for('home') }}" class="text-cyan-400">⬅ Kembali ke Home</a>
+    </header>
+
+    <main class="space-y-6 text-center">
+        <div>
+            <a href="https://www.instagram.com/agilsieroz" target="_blank" class="text-pink-400 text-2xl font-bold flex items-center justify-center space-x-3">
+                <i class="fab fa-instagram text-4xl"></i> 
+                <span>Instagram</span>
+            </a>
+        </div>
+        <div>
+            <a href="https://twitter.com/AgilSieroz" target="_blank" class="text-blue-400 text-2xl font-bold flex items-center justify-center space-x-3">
+                <i class="fab fa-x-twitter text-4xl"></i> 
+                <span>X (Twitter)</span>
+            </a>
+        </div>
+        <div>
+            <a href="https://www.linkedin.com/in/agil-sirodj-b74494265" target="_blank" class="text-blue-600 text-2xl font-bold flex items-center justify-center space-x-3">
+                <i class="fab fa-linkedin text-4xl"></i> 
+                <span>LinkedIn</span>
+            </a>
+        </div>
+    </main>
+</body>
+</html>

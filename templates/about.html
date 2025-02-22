@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tentang Saya - Ieroz</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body { background-color: black; color: white; transition: opacity 0.5s ease-in-out; }
+        .fade-in { opacity: 0; transition: opacity 1s ease-in-out; }
+    </style>
+</head>
+<body class="fade-in">
+    <header class="p-4 bg-gray-900 text-center">
+        <h1 class="text-3xl font-bold">Tentang Saya</h1>
+        <a href="{{ url_for('home') }}" class="text-cyan-400">⬅ Kembali ke Home</a>
+    </header>
+    
+    <main class="p-6 text-center">
+        <img src="/static/img/profile.jpg" alt="Foto Profil" class="rounded-full w-32 mx-auto shadow-lg">
+        <h2 class="text-3xl font-bold mt-4">Agil Sieroz</h2>
+        <p class="mt-2 text-gray-400 max-w-lg mx-auto">
+            Saya adalah seorang pengembang web yang memiliki passion dalam teknologi AI dan desain modern. 
+            Website ini adalah tempat saya berbagi informasi, berita, dan proyek terbaru saya. Selamat datang di dunia saya!
+        </p>
+        <div class="mt-6">
+            <a href="/contact" class="bg-cyan-500 px-4 py-2 rounded shadow-lg">Hubungi Saya</a>
+        </div>
+    </main>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            document.body.style.opacity = 1;
+        });
+    </script>
+</body>
+</html>
